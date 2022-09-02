@@ -16,7 +16,7 @@ jobs:
 
     steps:
       - name: "automate gitflow"
-        uses: Logerfo/gitflow-action@0.0.5
+        uses: Logerfo/gitflow-action@0.0.4
         with:
           github-token: ${{ secrets.TOKEN }}
           release: release
