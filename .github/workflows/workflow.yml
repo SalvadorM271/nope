@@ -1,14 +1,10 @@
 name: "Deploy to github pages"
 
-on:
+on: 
   push:
-    branches:
-      - "main"
-      - "development"
-  merge:
-    branches:
-      - "main"
-      - "development"
+  pull_request_review:
+  check_run:
+    types: [completed]
 
 jobs:
   build:
