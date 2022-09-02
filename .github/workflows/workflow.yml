@@ -5,6 +5,10 @@ on:
     branches:
       - "main"
       - "development"
+  merge:
+    branches:
+      - "main"
+      - "development"
 
 jobs:
   build:
@@ -18,12 +22,12 @@ jobs:
       - name: "automate gitflow"
         uses: Logerfo/gitflow-action@0.0.5
         with:
-          github-token: ${{ secrets.TOKEN }} # The `GITHUB_TOKEN` secret.
-          release: release # The `release` branch.
-          release-regex: ^release/(.*) # The regex for `release` branch.
-          dev: developer # The `dev` branch.
-          master: main # The `master` branch.
-          label: gitflow # The pull request label.
+          github-token: ${{ secrets.TOKEN }}
+          release: release
+          release-regex: ^release/(.*)
+          dev: developer 
+          master: main 
+          label: gitflow 
           auto-merge: true
           require-merge: false
 
